@@ -272,16 +272,28 @@
     }
     if (merged.length === 0) {
       root.innerHTML =
-        '<li class="rounded-xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500 text-sm">No lessons yet. Import JSON below or open the sample after refresh.</li>';
+        '<li class="rounded-xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500 text-sm">' +
+        '<span class="yt-thumb yt-thumb--empty mx-auto mb-3" aria-hidden="true">' +
+        '<svg class="yt-play-mark" width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#FF0033"/><path fill="#fff" d="M9.25 7.6v8.8L17.2 12 9.25 7.6z"/></svg>' +
+        '</span>No lessons yet. Import JSON below or open the sample after refresh.</li>';
       return;
     }
     root.innerHTML = merged
       .map(function (lesson) {
+        var playMark =
+          '<svg class="yt-play-mark" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+          '<rect width="24" height="24" rx="6" fill="#FF0033"/>' +
+          '<path fill="#fff" d="M9.25 7.6v8.8L17.2 12 9.25 7.6z"/>' +
+          '</svg>';
         var thumb = lesson.thumbnail
-          ? '<img src="' +
+          ? '<span class="yt-thumb shrink-0">' +
+            '<img src="' +
             escapeHtml(lesson.thumbnail) +
-            '" alt="" class="hidden sm:block h-16 w-28 rounded-md object-cover bg-slate-100 shrink-0" loading="lazy" width="112" height="64">'
-          : '<div class="hidden sm:flex h-16 w-28 rounded-md bg-slate-100 items-center justify-center text-slate-400 text-xs shrink-0">No thumb</div>';
+            '" alt="" class="h-16 w-28 rounded-md object-cover bg-slate-100" loading="lazy" width="112" height="64">' +
+            '<span class="yt-thumb__play">' +
+            playMark +
+            '</span></span>'
+          : '<span class="yt-thumb yt-thumb--empty shrink-0">' + playMark + '</span>';
         var meta =
           escapeHtml(lesson.channel || 'Unknown channel') +
           (lesson.duration ? ' · ' + formatTime(lesson.duration) : '');

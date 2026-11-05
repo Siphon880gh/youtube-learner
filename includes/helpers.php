@@ -15,6 +15,37 @@ function e($s): string
 }
 
 /**
+ * Rounded play mark — the cue that this app turns YouTube videos into lessons.
+ *
+ * @param int $size
+ * @param string $class
+ */
+function yt_play_mark($size = 20, $class = ''): string
+{
+    $size = (int) $size;
+    $classAttr = $class !== '' ? ' class="' . e($class) . '"' : '';
+    return '<svg' . $classAttr . ' width="' . $size . '" height="' . $size . '" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+        . '<rect width="24" height="24" rx="6" fill="#FF0033"/>'
+        . '<path fill="#fff" d="M9.25 7.6v8.8L17.2 12 9.25 7.6z"/>'
+        . '</svg>';
+}
+
+/**
+ * Mini player chrome: play + scrubber + chapter ticks.
+ *
+ * @param string $class
+ */
+function yt_player_motif($class = ''): string
+{
+    $extra = $class !== '' ? ' ' . e($class) : '';
+    return '<div class="yt-player-motif' . $extra . '" aria-hidden="true">'
+        . '<span class="yt-player-motif__play">' . yt_play_mark(18) . '</span>'
+        . '<span class="yt-player-motif__track"><span class="yt-player-motif__played"></span><span class="yt-player-motif__head"></span></span>'
+        . '<span class="yt-player-motif__ticks"><span></span><span></span><span></span><span></span></span>'
+        . '</div>';
+}
+
+/**
  * @param string $path
  * @param mixed $default
  * @return mixed

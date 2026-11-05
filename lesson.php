@@ -78,8 +78,9 @@ layout_header($title, array('nav' => 'home'));
   <div class="mx-auto max-w-6xl px-4 sm:px-6 py-4">
     <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div class="min-w-0">
-        <p class="text-xs uppercase tracking-wide text-slate-500 mb-1">
-          Lesson
+        <p class="yt-kicker text-xs uppercase tracking-wide text-slate-500 mb-1">
+          <?= yt_play_mark(14, 'yt-kicker__mark') ?>
+          <span>YouTube lesson</span>
           <?php if ($lessonSource === 'seed'): ?>
           <span class="ml-2 inline-flex items-center rounded-full bg-emerald-50 text-emerald-800 px-2 py-0.5 text-[10px] font-semibold tracking-wide normal-case">Sample</span>
           <?php elseif ($lessonSource === 'demo'): ?>
@@ -97,7 +98,7 @@ layout_header($title, array('nav' => 'home'));
       <div class="flex flex-wrap gap-2 text-sm">
         <button type="button" data-copy-deeplink class="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-slate-700 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">Copy deep link</button>
         <?php if (!empty($video['url'])): ?>
-        <a href="<?= e($video['url']) ?>" target="_blank" rel="noopener" class="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-slate-700 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">Open on YouTube</a>
+        <a href="<?= e($video['url']) ?>" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-md border border-slate-300 bg-white px-3 py-1.5 text-slate-700 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"><?= yt_play_mark(14) ?>Open on YouTube</a>
         <?php endif; ?>
       </div>
     </div>

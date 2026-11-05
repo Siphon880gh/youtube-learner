@@ -13,10 +13,14 @@ $dueCount = count($srs->due());
 layout_header('Home', array('nav' => 'home'));
 ?>
 <div class="mx-auto max-w-3xl px-4 sm:px-6 pt-16 pb-8">
-  <p class="text-sm font-medium tracking-wide uppercase text-slate-500 mb-4">Harness-first learning</p>
-  <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.15] mb-6">
+  <p class="yt-kicker text-sm font-medium tracking-wide uppercase text-slate-500 mb-4">
+    <?= yt_play_mark(16, 'yt-kicker__mark') ?>
+    <span>Learn from YouTube</span>
+  </p>
+  <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.15] mb-4">
     Turn YouTube into interactive study modules
   </h1>
+  <?= yt_player_motif('mb-6') ?>
   <p class="text-lg text-slate-600 leading-relaxed mb-6 max-w-readable">
     You don’t paste URLs into a web form
     <span class="relative inline-flex align-middle ml-0.5">
@@ -63,7 +67,8 @@ layout_header('Home', array('nav' => 'home'));
   </details>
 
   <div class="flex flex-wrap gap-3 mt-8 mb-10">
-    <a href="#workflow" class="inline-flex items-center justify-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2">
+    <a href="#workflow" class="inline-flex items-center justify-center gap-2 rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2">
+      <?= yt_play_mark(16) ?>
       Open in AI harness → paste YouTube URL
     </a>
     <a href="review.php" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2">

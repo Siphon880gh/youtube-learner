@@ -53,8 +53,9 @@ function layout_header(string $title, array $opts = []): void
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:px-3 focus:py-2 focus:ring-2 focus:ring-slate-900">Skip to content</a>
   <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur sticky top-0 z-40">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14">
-      <a href="index.php" class="font-semibold tracking-tight text-slate-900 hover:text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 rounded">
-        YouTube Learner
+      <a href="index.php" class="brand-yt inline-flex items-center gap-2 font-semibold tracking-tight text-slate-900 hover:text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 rounded">
+        <?= yt_play_mark(22, 'brand-yt__mark') ?>
+        <span>YouTube Learner</span>
       </a>
       <nav class="flex items-center gap-1 text-sm" aria-label="Primary">
         <a href="index.php" class="px-3 py-1.5 rounded-md <?= $active === 'home' ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900' ?> focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">Lessons</a>
@@ -73,7 +74,10 @@ function layout_footer(array $opts = []): void
   </main>
   <footer class="mt-20 border-t border-slate-200 py-10">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 text-sm text-slate-500 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
-      <p>Harness-first YouTube → interactive learning. Local-only data.</p>
+      <p class="inline-flex items-center gap-2">
+        <?= yt_play_mark(16, 'shrink-0') ?>
+        <span>Harness-first YouTube → interactive learning. Local-only data.</span>
+      </p>
       <p class="flex flex-wrap gap-3">
         <a class="underline hover:text-slate-800" href="https://github.com/Siphon880gh/youtube-learner" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a class="underline hover:text-slate-800" href="https://github.com/Siphon880gh/youtube-learner#readme" target="_blank" rel="noopener noreferrer">Docs</a>

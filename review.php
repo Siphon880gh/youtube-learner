@@ -27,14 +27,19 @@ if ($current === null && count($queue) > 0) {
 layout_header('Review', ['nav' => 'review']);
 ?>
 <div class="mx-auto max-w-3xl px-4 sm:px-6 pt-12 pb-20">
+  <p class="yt-kicker text-sm font-medium tracking-wide uppercase text-slate-500 mb-3">
+    <?= yt_play_mark(16, 'yt-kicker__mark') ?>
+    <span>Review from YouTube lessons</span>
+  </p>
   <h1 class="text-3xl font-semibold tracking-tight text-slate-900 mb-2">Spaced repetition</h1>
-  <p class="text-slate-600 mb-10">SM-2 inspired review. Rate cards After / Hard / Good / Easy to schedule the next interval.</p>
+  <p class="text-slate-600 mb-4">SM-2 inspired review. Rate cards After / Hard / Good / Easy to schedule the next interval.</p>
+  <?= yt_player_motif('mb-10') ?>
 
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
     <?php
     $stats = [
       ['Overdue', count($buckets['overdue']), 'text-red-700 bg-red-50 border-red-100'],
-      ['Due today', count($buckets['dueToday']), 'text-amber-800 bg-amber-50 border-amber-100'],
+      ['Due today', count($buckets['dueToday']), 'srs-stat--today'],
       ['Upcoming', count($buckets['upcoming']), 'text-slate-700 bg-slate-50 border-slate-200'],
       ['Total', count($buckets['all']), 'text-slate-700 bg-white border-slate-200'],
     ];

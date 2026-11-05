@@ -628,6 +628,7 @@ html[data-theme="night"] .bg-amber-50,
 html[data-theme="night"] .bg-amber-50\/40 {
   background-color: #78350f !important;
 }
+html[data-theme="night"] .text-amber-800,
 html[data-theme="night"] .text-amber-900,
 html[data-theme="night"] .text-amber-950 {
   color: #fde68a !important;
@@ -638,4 +639,149 @@ html[data-theme="night"] .border-amber-200 {
 
 html[data-theme="night"] a.font-semibold {
   color: #f1f5f9;
+}
+
+/* Review stat: Due today — amber-800 on amber-50 fails WCAG, especially at night */
+.srs-stat--today {
+  color: #451a03;
+  background: #fde68a;
+  border-color: #b45309;
+}
+
+.srs-stat--today .srs-stat__label,
+.srs-stat--today p:first-child {
+  color: #78350f;
+  opacity: 1;
+}
+
+html[data-theme="night"] .srs-stat--today {
+  color: #451a03;
+  background: #fbbf24;
+  border-color: #fde68a;
+}
+
+html[data-theme="night"] .srs-stat--today .srs-stat__label,
+html[data-theme="night"] .srs-stat--today p:first-child {
+  color: #78350f;
+}
+
+/* YouTube play mark + player chrome motifs */
+.brand-yt__mark {
+  flex: 0 0 auto;
+  display: block;
+}
+
+.yt-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.yt-kicker__mark {
+  flex: 0 0 auto;
+}
+
+.yt-player-motif {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.65rem;
+  row-gap: 0.35rem;
+  align-items: center;
+  max-width: 22rem;
+}
+
+.yt-player-motif__play {
+  grid-row: 1;
+  line-height: 0;
+}
+
+.yt-player-motif__track {
+  position: relative;
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: #d4d4d8;
+}
+
+.yt-player-motif__played {
+  display: block;
+  width: 38%;
+  height: 100%;
+  border-radius: 999px;
+  background: #ff0033;
+}
+
+.yt-player-motif__head {
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  width: 9px;
+  height: 9px;
+  margin-top: -4.5px;
+  margin-left: -4.5px;
+  border-radius: 50%;
+  background: #ff0033;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.yt-player-motif__ticks {
+  grid-column: 2;
+  display: flex;
+  gap: 18%;
+  height: 6px;
+}
+
+.yt-player-motif__ticks span {
+  flex: 0 0 2px;
+  height: 100%;
+  background: #a1a1aa;
+  border-radius: 1px;
+}
+
+.yt-thumb {
+  position: relative;
+  width: 7rem;
+  height: 4rem;
+}
+
+.yt-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.yt-thumb__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(15 23 42 / 0.28);
+  border-radius: 0.375rem;
+}
+
+.yt-thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  background:
+    linear-gradient(180deg, #3f3f46 0%, #18181b 100%);
+}
+
+html[data-theme="night"] .yt-player-motif__track {
+  background: #475569;
+}
+
+html[data-theme="night"] .yt-player-motif__head {
+  box-shadow: 0 0 0 2px #0f172a;
+}
+
+html[data-theme="night"] .yt-player-motif__ticks span {
+  background: #64748b;
+}
+
+html[data-theme="night"] .yt-thumb__play {
+  background: rgb(2 6 23 / 0.4);
 }
