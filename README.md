@@ -1,4 +1,4 @@
-# Learnyt (youtube-learner)
+# YouTube Learner
 
 ![Last Commit](https://img.shields.io/github/last-commit/Siphon880gh/youtube-learner/main)
 <a target="_blank" href="https://github.com/Siphon880gh" rel="nofollow"><img src="https://img.shields.io/badge/GitHub--blue?style=social&logo=GitHub" alt="Github" data-canonical-src="https://img.shields.io/badge/GitHub--blue?style=social&logo=GitHub" style="max-width:8.5ch;"></a>
@@ -37,7 +37,7 @@ Automatic diagrams as visual breaks in the transcript:
 ## Quick start
 
 ```bash
-cd /path/to/learnyt
+cd /path/to/youtube-learner
 cp .env.example .env          # optional tweaks
 php -S localhost:8080
 ```

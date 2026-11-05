@@ -1,4 +1,4 @@
-### **Task: Learnyt Lesson Viewer Enhancements**
+### **Task: YouTube Learner Lesson Viewer Enhancements**
 
 #### **1. Diagram & Thumbnail Lightbox**
 - **Viewport & Auto-Fit:** Lightbox opens full-viewport. Auto-fit logic scales up to **150%** for small images and scales down to fit viewport boundaries for larger images.

@@ -1,4 +1,4 @@
-# Learnyt data schema
+# YouTube Learner data schema
 
 All lesson data is local JSON under `data/`. No database required for MVP.
 

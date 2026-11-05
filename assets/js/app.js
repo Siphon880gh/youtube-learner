@@ -1,5 +1,5 @@
 /**
- * Learnyt — vanilla JS interactions
+ * YouTube Learner — vanilla JS interactions
  * No secrets; all API calls same-origin.
  */
 (function () {

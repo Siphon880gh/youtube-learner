@@ -1,13 +1,13 @@
 # Skill: youtube-lesson
 
-Generate a Learnyt lesson JSON from a YouTube URL (or video ID) for local study in this PHP app.
+Generate a YouTube Learner lesson JSON from a YouTube URL (or video ID) for local study in this PHP app.
 
 ## When to use
 
 Use this skill when the user:
 
 - Pastes a YouTube URL / video ID in chat and wants a **learning module**
-- Asks to “make a lesson”, “build a study module”, “extract TOC + transcript”, or “add to Learnyt”
+- Asks to “make a lesson”, “build a study module”, “extract TOC + transcript”, or “add to YouTube Learner”
 - Wants dual TOCs (chronological + learning structure) saved under `data/lessons/`
 
 Do **not** use this skill for unrelated YouTube tasks (download media for redistribution, comment scraping, etc.).
@@ -25,7 +25,7 @@ Confirm the video ID before writing files.
 
 ## Outputs
 
-Prefer producing lesson JSON the user can **Import** on the Learnyt home page (browser localStorage). Optionally also write a file for convenience:
+Prefer producing lesson JSON the user can **Import** on the YouTube Learner home page (browser localStorage). Optionally also write a file for convenience:
 
 ```
 data/lessons/{videoId}.json   # only if asked; do not overwrite sample-spaced-rep unless fixing a transcript/video mismatch
@@ -322,7 +322,7 @@ Open `http://localhost:8080/` — lesson should appear (Import or file). Open `l
 
 ## Diagrams / infographics
 
-**Required when learnable ideas can be illustrated:** populate `diagrams[]` with Mermaid visuals attached to transcript segments as **visual breaks**. This is not optional decoration—the Learnyt UI is built to interrupt the transcript with these diagrams and to list them in a gallery.
+**Required when learnable ideas can be illustrated:** populate `diagrams[]` with Mermaid visuals attached to transcript segments as **visual breaks**. This is not optional decoration—the YouTube Learner UI is built to interrupt the transcript with these diagrams and to list them in a gallery.
 
 Good candidates:
 
@@ -392,4 +392,4 @@ The PHP UI (`lesson.php` + Mermaid CDN):
 - [ ] Added Mermaid visual breaks (`diagrams[]` with `kind: "mermaid"`, `segmentId`, `start`) for illustratable concepts
 - [ ] Added short concept guides and a map of content when the video has ideas that guides would help; otherwise left `guides` empty
 - [ ] Wrote `data/lessons/{id}.json`
-- [ ] Confirmed file opens in Learnyt UI (Transcript learning by default; Guides learning shows the map of content and guides, or is grayed out when there are no guides)
+- [ ] Confirmed file opens in YouTube Learner UI (Transcript learning by default; Guides learning shows the map of content and guides, or is grayed out when there are no guides)

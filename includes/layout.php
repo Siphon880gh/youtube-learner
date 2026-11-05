@@ -7,7 +7,7 @@ declare(strict_types=1);
 
 function layout_header(string $title, array $opts = []): void
 {
-    $app = env('APP_NAME', 'Learnyt');
+    $app = env('APP_NAME', 'YouTube Learner');
     $full = $title === '' ? $app : $title . ' · ' . $app;
     $bodyClass = $opts['bodyClass'] ?? 'bg-slate-50 text-slate-800 antialiased';
     $active = $opts['nav'] ?? '';
@@ -54,7 +54,7 @@ function layout_header(string $title, array $opts = []): void
   <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur sticky top-0 z-40">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14">
       <a href="index.php" class="font-semibold tracking-tight text-slate-900 hover:text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 rounded">
-        Learnyt
+        YouTube Learner
       </a>
       <nav class="flex items-center gap-1 text-sm" aria-label="Primary">
         <a href="index.php" class="px-3 py-1.5 rounded-md <?= $active === 'home' ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900' ?> focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">Lessons</a>

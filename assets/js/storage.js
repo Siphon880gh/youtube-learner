@@ -1,5 +1,5 @@
 /**
- * Learnyt dual storage — browser localStorage drafts + helpers.
+ * YouTube Learner dual storage — browser localStorage drafts + helpers.
  * Keys: learnyt_user_lessons_v1, learnyt_highlights_v1, learnyt_srs_v1
  * No secrets. Seed id sample-spaced-rep cannot be overwritten.
  */
@@ -487,7 +487,7 @@
 
     var titleEl = document.querySelector('h1');
     if (titleEl && lesson.video.title) titleEl.textContent = lesson.video.title;
-    document.title = (lesson.video.title || cfg.videoId) + ' · Learnyt';
+    document.title = (lesson.video.title || cfg.videoId) + ' · YouTube Learner';
 
     // Overview
     var overview = document.querySelector('#overview-panel p.prose-lesson, #overview-panel p.text-slate-600');
