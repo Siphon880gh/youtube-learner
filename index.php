@@ -17,7 +17,7 @@ layout_header('Home', array('nav' => 'home'));
   <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 leading-[1.15] mb-6">
     Turn YouTube into interactive study modules
   </h1>
-  <p class="text-lg text-slate-600 leading-relaxed mb-10 max-w-readable">
+  <p class="text-lg text-slate-600 leading-relaxed mb-6 max-w-readable">
     You don’t paste URLs into a web form
     <span class="relative inline-flex align-middle ml-0.5">
       <button type="button"
@@ -33,16 +33,9 @@ layout_header('Home', array('nav' => 'home'));
         role="region"
         aria-labelledby="tokens-info-btn"
         hidden
-        class="absolute left-0 top-full z-30 mt-2 w-[min(36rem,calc(100vw-2rem))] max-h-[70vh] overflow-y-auto rounded-lg border border-slate-200 bg-white p-3 text-sm font-normal not-italic text-slate-600 leading-relaxed shadow-lg normal-case tracking-normal text-left">
-        <p class="mb-2">Weng provides this service for free and cannot cover the ongoing cost of AI tokens. That's why this Prompt Builder is designed to let users supply their own AI processing resources rather than having the app pay for them. This is also why AI processing isn't integrated directly into the app for a more seamless experience.</p>
-        <p class="mb-2">There are several ways to accomplish this:</p>
-        <ol class="mb-2 list-decimal space-y-1 pl-5">
-          <li><strong class="font-medium text-slate-800">Copy the generated prompt into ChatGPT or Claude:</strong> Users can use their existing AI subscriptions to process the prompt.</li>
-          <li><strong class="font-medium text-slate-800">Copy the generated prompt into an AI harness like Cursor or Claude Code:</strong> Users can leverage their own AI coding environments and available token allowances.</li>
-          <li><strong class="font-medium text-slate-800">Provide their own API key:</strong> The app could process prompts directly using the user's API key, with usage billed to the user. However, this requires trusting that the app does not store, log, or copy the key. This is generally easier to verify with a locally running application or a Chrome extension, although neither is inherently secure without reviewing how it handles credentials.</li>
-        </ol>
-        <p class="mb-2"><strong class="font-medium text-slate-800">For now, letting you use your own AI tools is the most practical approach.</strong> It keeps the service free while allowing you to use AI resources you already have access to. This app uses the method best suited to its particular workflow.</p>
-        <p>If the service eventually becomes commercial and can sustain the cost of AI tokens, AI processing could be integrated directly into the app for a more seamless experience.</p>
+        class="absolute left-0 top-full z-30 mt-2 w-[min(24rem,calc(100vw-2rem))] rounded-lg border border-slate-200 bg-white p-3 text-sm font-normal not-italic text-slate-600 leading-relaxed shadow-lg normal-case tracking-normal text-left">
+        <span class="block mb-1 font-medium text-slate-800">Lessons are built in your AI harness, not here.</span>
+        <span class="block">Open this project in Cursor, Claude Code, or a similar tool and paste a YouTube link in chat. The bundled <code class="text-xs">youtube-lesson</code> skill fetches the transcript and writes lesson JSON (TOCs, diagrams, review cards). You then import that JSON on this page to study it.</span>
       </span>
     </span>.
     Open this project in an AI coding harness,
@@ -50,6 +43,24 @@ layout_header('Home', array('nav' => 'home'));
     into this browser (localStorage), study offline to the server, then optionally
     <strong class="font-medium text-slate-800">Sync to demo</strong> so any visitor of this app can open it.
   </p>
+
+  <details class="group mb-10 max-w-readable rounded-xl border border-slate-200 bg-white text-sm text-slate-600 leading-relaxed open:shadow-sm">
+    <summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 font-medium text-slate-800 hover:bg-slate-50 rounded-xl [&::-webkit-details-marker]:hidden">
+      Why bring your own AI?
+      <span class="text-slate-400 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+    </summary>
+    <div class="border-t border-slate-200 px-4 py-3">
+      <p class="mb-2">Weng provides this service for free and cannot cover the ongoing cost of AI tokens. That's why this Prompt Builder is designed to let users supply their own AI processing resources rather than having the app pay for them. This is also why AI processing isn't integrated directly into the app for a more seamless experience.</p>
+      <p class="mb-2">There are several ways to accomplish this:</p>
+      <ol class="mb-2 list-decimal space-y-1 pl-5">
+      <li><strong class="font-medium text-slate-800">Copy the generated prompt into ChatGPT or Claude:</strong> Users can use their existing AI subscriptions to process the prompt.</li>
+      <li><strong class="font-medium text-slate-800">Copy the generated prompt into an AI harness like Cursor or Claude Code:</strong> Users can leverage their own AI coding environments and available token allowances.</li>
+      <li><strong class="font-medium text-slate-800">Provide their own API key:</strong> The app could process prompts directly using the user's API key, with usage billed to the user. However, this requires trusting that the app does not store, log, or copy the key. This is generally easier to verify with a locally running application or a Chrome extension, although neither is inherently secure without reviewing how it handles credentials.</li>
+      </ol>
+      <p class="mb-2"><strong class="font-medium text-slate-800">For now, letting you use your own AI tools is the most practical approach.</strong> It keeps the service free while allowing you to use AI resources you already have access to. This app uses the method best suited to its particular workflow.</p>
+      <p>If the service eventually becomes commercial and can sustain the cost of AI tokens, AI processing could be integrated directly into the app for a more seamless experience.</p>
+    </div>
+  </details>
 
   <div class="flex flex-wrap gap-3 mt-8 mb-10">
     <a href="#workflow" class="inline-flex items-center justify-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2">
